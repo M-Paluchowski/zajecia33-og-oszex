@@ -31,7 +31,7 @@ public class OfferController {
     }
 
     @PostMapping("/offers")
-    public String createOffer(@Valid @RequestBody OfferForm form, BindingResult bindingResult) {
+    public void createOffer(@RequestBody OfferForm form, BindingResult bindingResult) {
         offerService.save(form);
     }
 }
